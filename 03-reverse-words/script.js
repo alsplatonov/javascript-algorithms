@@ -9,7 +9,10 @@
 */
 
 function reverseWords(str) {
-    // Напишите код здесь
+    let newStr = str.split(" ");
+    newStr.reverse();
+    newStr = newStr.join(" ");
+    return newStr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -5,11 +5,20 @@
  * строку каждое слово в которой начинается с прописной буквы.
  *
 */
-
 function capitalize(str) {
-    // Напишите код здесь
+    let newStr = str.split(" ");
+    let newStr2 = [];
+    let i = 0;
+    newStr.forEach(function (item) {
+        item = item.charAt(0).toUpperCase() + item.slice(1);
+        newStr2[i] = item;
+        i++;
+    });
+    newStr = newStr2.join(" ");
+    return newStr;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(capitalize('молодость всё простит')); // "Молодость Всё Простит"
+

@@ -8,11 +8,16 @@
  * ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'].
  *
 */
-
 function findVowels(str) {
-    // Напишите код здесь
+    const Vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (Vowels.indexOf(str[i].toLowerCase()) > -1) {
+            count += 1;
+        }
+    }
+    return count;
 }
-
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(findVowels('здравствуй')); // 2

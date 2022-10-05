@@ -8,7 +8,13 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    let uniqueNumb = [];
+    arr.forEach((number) => {
+        if (!uniqueNumb.includes(number)) { //если номер еще не добавили в новый массив, 
+            uniqueNumb.push(number);        //то добавим
+        }
+    });
+    return uniqueNumb;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

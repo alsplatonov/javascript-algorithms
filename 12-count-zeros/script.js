@@ -5,11 +5,27 @@
  * Возвращать функция должна суммарное количество нулей, содержащихся во всех числах от 1 до n включительно.
  *
 */
-
-function countZeros(n) {
-    // Напишите код здесь
+function countZeroInNum(num) {
+    let b, count = 0
+    while (num > 0) {
+        b = num % 10
+        if (b == 0) {
+            count++
+        }
+        num = parseInt(num / 10)
+    }
+    return count;
 }
 
+
+function countZeros(n) {
+    let count = 0;
+    for (let i = 10; i <= n; i++) {
+        count += countZeroInNum(i);
+    }
+    return count;
+}
+console.log(countZeros(200));
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(countZeros(20)); // 2 – два нуля, по одному в числах 10 и 20
