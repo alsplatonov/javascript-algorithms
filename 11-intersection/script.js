@@ -8,7 +8,7 @@
 */
 
 function uniq(arr) {
-    let uniqueNumb = [];
+    const uniqueNumb = [];
     arr.forEach((number) => {
         if (!uniqueNumb.includes(number)) { //если номер еще не добавили в новый массив, 
             uniqueNumb.push(number);        //то добавим
@@ -21,7 +21,7 @@ function intersection(arr1, arr2) {
     arr1 = uniq(arr1);
     arr2 = uniq(arr2);
 
-    let newArr = [];
+    const newArr = [];
     let j = 0;
     for (let i = 0; i < arr2.length; i++) {
         if (arr1.indexOf(arr2[i]) > -1) {

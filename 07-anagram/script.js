@@ -7,7 +7,6 @@
  * нет пробелов и знаков препинания.
  * 
 */
-
 function anagram(str1, str2) {
     //прреобразуем в массивы
     let newstr1 = str1.split('');

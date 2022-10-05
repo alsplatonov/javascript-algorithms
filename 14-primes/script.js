@@ -19,7 +19,7 @@ function isPrime(n) {
 }
 
 function primes(num) {
-    let arr = [];
+    const arr = [];
     let j = 0;
     for (let i = 2; i <= num; i++) {
         if (isPrime(i)) {
